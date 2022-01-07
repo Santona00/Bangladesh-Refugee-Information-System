@@ -1,5 +1,5 @@
- function show() {
-    var name = document.getElementById("name").value;
+ function submit() {
+    var country = document.getElementById("country").value;
 
     //console.log(px);
     var id= document.getElementById("id").value;
@@ -7,7 +7,7 @@
  var sub = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
 
-     firebase.database().ref('User/contact/' + id).set({
+     firebase.database().ref('User/registration/' + id).set({
             username: name,
             userid : id,
             subject:sub,

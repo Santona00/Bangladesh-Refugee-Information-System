@@ -18,6 +18,11 @@
       return document.querySelector(el)
     }
   }
+  /*.......
+
+  show()
+  */
+
 
   /**
    * Easy event listener function

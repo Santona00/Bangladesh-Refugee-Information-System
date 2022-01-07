@@ -3,8 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -29,24 +29,25 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
- <!--firebase.js-->
- <!-- <script src="assets/js/contact.js"></script> -->
 </head>
+
 <!--firebase code-->
+ <script src="assets/js/contact.js"></script> 
 <script src="assets/js/main.js"></script>  
     <script>
-       const firebaseConfig = {
+     // Your web app's Firebase configuration
+  const firebaseConfig = {
     apiKey: "AIzaSyB6IY0O5FDD2_tmDxhbFGiWNvujO_HvD_w",
     authDomain: "bd-refugee-information-system.firebaseapp.com",
+    databaseURL: "https://bd-refugee-information-system-default-rtdb.firebaseio.com",
     projectId: "bd-refugee-information-system",
     storageBucket: "bd-refugee-information-system.appspot.com",
     messagingSenderId: "700305332490",
     appId: "1:700305332490:web:90f775b7e15bb1e07b42f3"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
+  // Initialize Firebase
+  firebase. initializeApp(firebaseConfig);
     </script>
     <!-- firebase code ends--> 
 
@@ -300,50 +301,22 @@
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col form-group">
-                  <input type="text" class="form-control" name="email" id="id" placeholder="Your ID" required>
+                  <input type="text" class="form-control" name="id" id="id" placeholder="Your ID" required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="sub" id="subject" placeholder="subject" required>
               </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message" required></textarea>
-              </div>
-              <!-- <div class="my-3">
+               <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="message" id="message" required></textarea>
+              </div> 
+              <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
+                <!-- <div class="error-message"></div> -->
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> -->
+              </div>
               <div class="text-center">
                 <button type="submit" onclick="show()">Send Message</button>
-              
-                <script>
-
-                function show() {
-    var name = document.getElementById("name").value;
-
-    // console.log(px);
-    var id= document.getElementById("id").value;
-     // alert(px+" "+p);
- var sub = document.getElementById("subject").value;
-  var message = document.getElementById("message").value;
-
-     firebase.database().ref('User/contact/' + id).set({
-            username: name,
-            userid : id,
-            subject:sub,
-            Message:message
-          }, function(error) {
-            if (error) {
-              // The write failed...
-            } else {
-                alert("DONE");
-              
-           
-            }
-          });
- }
-              </script>
               
               </div>
               

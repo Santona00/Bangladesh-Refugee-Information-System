@@ -70,6 +70,32 @@
   <!-- End Header -->
 <!--form started-->
 
+<!--firebase code-->
+ <script src="assets/js/registration.js"></script> 
+ 
+    <script>
+     // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyB6IY0O5FDD2_tmDxhbFGiWNvujO_HvD_w",
+    authDomain: "bd-refugee-information-system.firebaseapp.com",
+    databaseURL: "https://bd-refugee-information-system-default-rtdb.firebaseio.com",
+    projectId: "bd-refugee-information-system",
+    storageBucket: "bd-refugee-information-system.appspot.com",
+    messagingSenderId: "700305332490",
+    appId: "1:700305332490:web:90f775b7e15bb1e07b42f3"
+  };
+
+  // Initialize Firebase
+  firebase. initializeApp(firebaseConfig);
+    </script>
+    <!-- firebase code ends--> 
+
+
+
+    <body>
+
+    <br>
+    <br>
 <div class="container py-5 h-80">
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-20 col-lg-10 col-xl-20">
@@ -438,7 +464,7 @@
               </div> -->
 
               <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                <input class="btn btn-primary btn-lg" type="submit" onclick="submit()" value="Submit" />
               </div>       
       </div>
     </div>
