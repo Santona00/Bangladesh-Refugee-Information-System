@@ -36,7 +36,7 @@
 }
 </style>
 </head>
- <script src="assets/js/login.js"></script> 
+ <script src="assets/js/refugee_info.js"></script> 
 
     <script>
      // Your web app's Firebase configuration
@@ -57,7 +57,7 @@
 <body>
 <div class="login-form">
     <form action="/examples/actions/confirmation.php" method="post">
-        <h2 class="text-center" >Log in</h2>       
+        <h2 class="text-center" >Enter Refugee ID</h2>       
         <div class="form-group">
             <input type="text" class="form-control" placeholder="User ID" required="required">
         </div>
@@ -65,18 +65,18 @@
             <input type="password" class="form-control" placeholder="Password" required="required">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block" onclick="login()">Log in</button>
+            <button type="submit" class="btn btn-primary btn-block" onclick="login()">Search</button>
         </div>
         <!-- <div class="text-center">
                 <button type="submit" onclick="show()">Send Message</button>
               
               </div> -->
         <div class="clearfix">
-            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-            <!-- <a href="#" class="float-right">Forgot Password?</a> -->
+            <!-- <label class="float-left form-check-label"><input type="checkbox"> Remember me</label> -->
+           
         </div>        
     </form>
-    <p class="text-center"><a href="registration_page.html">Create an Account</a></p>
+    <!-- <p class="text-center"><a href="registration_page.html">Create an Account</a></p> -->
 </div>
 </body>
 </html>
