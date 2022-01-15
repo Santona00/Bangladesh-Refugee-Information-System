@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bangladesh Refugee Information System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo_r.png" rel="icon">
+  <!-- <link href="assets/img/logo_r.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<!--<script src="assets/js/main.js"></script>-->
+<script src="assets/js/registration.js"></script>
+  <script>
+   const firebaseConfig = {
+    apiKey: "AIzaSyB6IY0O5FDD2_tmDxhbFGiWNvujO_HvD_w",
+    authDomain: "bd-refugee-information-system.firebaseapp.com",
+    databaseURL: "https://bd-refugee-information-system-default-rtdb.firebaseio.com",
+    projectId: "bd-refugee-information-system",
+    storageBucket: "bd-refugee-information-system.appspot.com",
+    messagingSenderId: "700305332490",
+    appId: "1:700305332490:web:90f775b7e15bb1e07b42f3"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- <h1 class="logo"><a href="index.html">BizLand<span>.</span></a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+<img src="assets/img/logo_r.png" style="height: 90px;" class="img-fluid" alt="Responsive image">
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+          <li><a class="nav-link scrollto" href="refugee_info.html">Refugee Information</a></li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
+              <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="medical_health.html">Medical & Health</a></li>
+              <li><a href="acommodation.html">Acommodation</a></li>
+              <!-- <li><a href="#">Drop Down 4</a></li> -->
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="registration_page.html">Register</a></li>
+      
+          <li><a class="nav-link scrollto" href="login.html">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+<!--form started-->
+
+    <body>
+
+    <br>
+    <br>
+<div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+       <div class="form-control-lg col-md-6 col-xl-20">
+<br>
+<br>
+            <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Refugee Information</h2>
+            
+                <input  type="" id="user_id" name="user_id" placeholder="Enter User id"/> <br><br>
+                <button class="btn btn-primary btn-lg" onclick="search()" >Search</button><br><br>
+
+                 <!-- <div class="mt-4 pt-2">
+                <input  type="submit" onclick="submit()"  value="Submit" />
+              </div>  -->
+<br>
+<div id="show_info" style="display: none;">
+                    <label class="form-label" for="country">Country(In English)</label>
+                     <input type="" id="country" class="form-control form-control-lg" /> 
+                                    <br>
+                    <label class="form-label" for="firstName">First Name(In English)</label>
+                    <input type="" id="firstName" class="form-control form-control-lg" />                          
+              <br>           
+                    <label class="form-label" for="lastName">Last Name(In English)</label>
+                     <input type="" id="lastName" class="form-control form-control-lg" />    
+                     <br>
+                             
+                    <label class="form-label" for="Year">Year of fleeing/expelled(yy)</label>
+                     <input type="" id="Year" class="form-control form-control-lg" /> 
+                            <br> 
+                    <label class="form-label" for="gender">Gender(In English)</label>
+                     <input type="" id="gender" class="form-control form-control-lg" />
+                     <br> 
+                    <!-- <label class="form-label" for="gender">Password</label>
+                     <input type="" id="Password" class="form-control form-control-lg" />
+                                        -->
+              
+              </div>
+</div>
+      </div>
+    </div>
+  </div>
+<!--form ended-->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <footer>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span></span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a href="https://bootstrapmade.com/">Santona</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -22,3 +22,34 @@
             }
           });
  }
+ 
+
+//  function show() {
+   
+//     var firstName= document.getElementById("firstName").value;
+   
+//       var lastName = document.getElementById("lastName").value;
+     
+//       var Year = document.getElementById("Year").value;
+//       //alert(country + " " +firstName +" "  +lastName+ " "+ gender +" "+ Year+" "+Password);
+
+//      firebase.database().ref('User/registration/'+ firstName).set({
+//             //country: country,
+//             firstName: firstName,
+//             lastName: lastName,
+//             Year:Year,
+//             //Password:Password
+           
+//           }, function(error) {
+//             if (error) {
+//               // The write failed...
+//             } else {
+                
+              
+           
+//             }
+//           });
+//  }
+
+ 
+
