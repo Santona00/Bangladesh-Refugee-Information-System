@@ -10,17 +10,14 @@
        var gender = document.getElementById("Gender").value;
       //alert(country + " " +firstName +" "  +lastName+ " "+ gender +" "+ Year+" "+Password);
 var user_id = Date.now();
-alert(user_id);
+alert("Your User id is "+user_id);
      firebase.database().ref('User/registration/'+ user_id).set({
             country: country,
             firstName: firstName,
-            lastName: lastName,
-            
+            lastName: lastName,            
             Password:Password,
             Year:Year,
             gender:gender
-
-           
           }, function(error) {
             if (error) {
               // The write failed...
@@ -65,7 +62,7 @@ firebase.database().ref('User/registration/'+user_id).once('value').then(functio
      //alert("data found!!")
   }
   else{
-alert("data not found")
+alert("data not found");
   }
 },function(error)
 {
@@ -80,6 +77,18 @@ alert("data not found")
 }
 
 
+function login()
+{
+  var user_id= document.getElementById("user__id").value;
+  var passwrd=document.getElementById("pass_word").value;
+
+  if(user_id=="admin" && passwrd=="admin")
+  {
+    alert("logged in");
+    location.href = "refugee_info.html";
+  }
+
+}
 
 //  function show() {
    
